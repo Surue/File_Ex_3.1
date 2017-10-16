@@ -1,0 +1,82 @@
+{
+	"Brick0": {
+		"typeCoord": "Box2D",
+		"x": 0,
+		"y": 7,
+		"textureName": "brick.png"
+	},
+	"Brick1": {
+		"typeCoord": "Box2D",
+		"x": 1,
+		"y": 7,
+		"textureName": "brick.png"
+	},
+	"Brick2": {
+		"typeCoord": "Box2D",
+		"x": 2,
+		"y": 7,
+		"textureName": "brick.png"
+	},
+	"Brick3": {
+		"typeCoord": "Box2D",
+		"x": 15,
+		"y": 7,
+		"textureName": "brick.png"
+	},
+	"Brick4": {
+		"typeCoord": "Box2D",
+		"x": 5,
+		"y": 7,
+		"textureName": "brick.png"
+	},
+	"Brick5": {
+		"typeCoord": "Box2D",
+		"x": 6,
+		"y": 7,
+		"textureName": "brick.png"
+	},
+	"Brick6": {
+		"typeCoord": "Box2D",
+		"x": 7,
+		"y": 7,
+		"textureName": "brick.png"
+	},
+	"Brick7": {
+		"typeCoord": "Box2D",
+		"x": 9,
+		"y": 5,
+		"textureName": "brick.png"
+	},
+	"Brick8": {
+		"typeCoord": "Box2D",
+		"x": 10,
+		"y": 5,
+		"textureName": "brick.png"
+	},
+	"Brick9": {
+		"typeCoord": "Box2D",
+		"x": 12,
+		"y": 7,
+		"textureName": "brick.png"
+	},
+	"Brick10": {
+		"typeCoord": "Box2D",
+		"x": 13,
+		"y": 7,
+		"textureName": "brick.png"
+	},
+	"Brick11": {
+		"typeCoord": "Box2D",
+		"x": 14,
+		"y": 7,
+		"textureName": "brick.png"
+	},
+	"Player" : {
+		"typeCoord": "SFML",
+		"x" : 50,
+		"y" : 40,
+		"textureName" : "slime.png",
+		"isDynamic" : 1,
+		"isPlayable" : 1
+	}
+}
