@@ -4,6 +4,7 @@ EntityManager::EntityManager() {
 }
 
 EntityManager::~EntityManager() {
+	delete character;
 }
 
 void EntityManager::addEntity(b2Vec2 position, std::string textureName, bool isDynamic, bool isPlayable, b2World& world) {
@@ -12,12 +13,18 @@ void EntityManager::addEntity(b2Vec2 position, std::string textureName, bool isD
 	} else if (!isPlayable) {
 		entitiesList.push_back(EntityDynamic(position, textureName, world));
 	} else{
-		entitiesList.push_back(EntityPlayable(position, textureName, world));
+		character = new Character(position, textureName, world);
 	}
+}
+
+Character & EntityManager::getCharacter() {
+	return *character;
 }
 
 void EntityManager::draw(sf::RenderWindow & window) {
 	for (auto entity : entitiesList) {
 		entity.draw(window);
 	}
+
+	character->draw(window);
 }

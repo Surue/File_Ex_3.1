@@ -15,3 +15,23 @@ EntityDynamic::EntityDynamic(b2Vec2 & position, std::string textureName, b2World
 
 EntityDynamic::~EntityDynamic() {
 }
+
+void EntityDynamic::setLinearVelocity(b2Vec2 vect) {
+	body->SetLinearVelocity(vect);
+}
+
+void EntityDynamic::applyForce(b2Vec2 vect) {
+	body->ApplyForce(vect, body->GetWorldCenter(), true);
+}
+
+void EntityDynamic::applyLinearImpulse(b2Vec2 vect) {
+	body->ApplyLinearImpulse(vect, body->GetWorldCenter(), true);
+}
+
+b2Vec2 EntityDynamic::getLinearVelocity() {
+	return body->GetLinearVelocity();
+}
+
+float EntityDynamic::getMass() {
+	return body->GetMass();
+}

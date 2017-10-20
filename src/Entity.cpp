@@ -13,3 +13,7 @@ void Entity::draw(sf::RenderWindow & window) {
 	sprite.setPosition(PhysicalWorld::meterToPixel(body->GetPosition()));
 	window.draw(sprite);
 }
+
+b2Vec2 Entity::getPosition() {
+	return body->GetPosition();
+}

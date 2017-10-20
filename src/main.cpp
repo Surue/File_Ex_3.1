@@ -7,7 +7,14 @@
 
 #include "json.hpp"
 
+/*
+	TO DO:
+	enum avec un state qui est mis en place par rapport au déplacement en cours du character plus bas
+	possible de mettre genre IDLE, LEFT, RIGHT, JUMP
+*/
+
 int main() {
+	bool isJumping = false;
 	//Add folder containing images to the TextureManager
 	TextureManager::Instance().addResourceDirectory("data/image/");
 
@@ -23,6 +30,14 @@ int main() {
 		system("pause");
 		return EXIT_FAILURE;
 	}
+
+	//Get the character player
+	Character& character = world.getCharacter();
+
+	/*
+		TO DO:
+		Instancié l'état du character
+	*/
 
 	while (window.isOpen()) {
 		world.step();
@@ -41,9 +56,29 @@ int main() {
 					break;
 				}
 				break;
+
+				/*
+					TO DO:
+					- Récupérer les touches lorsqu'elles sont pressée
+					- Récupére quand les touches sont relâchées
+					par rapport aux touche le state du character sera changé
+				*/
 			}
 		}
 
+		/*
+			TO DO:
+			- Machine d'état, elle passe par les états du character et par rapport à son état elle va réagir
+			- gestion des forces horizontales. Elles dépendent de si on va à gauche ou à droite
+			- gestion des forces verticales. Elles dépendent de si on appui sur le bouton jump
+			- Envoié un vecteur de force composé de la force hoirizontal et vertical au character
+
+			Pour appliquer ou récupérer des forces, va voir les fonctions dans la class EntityDynamic, les noms de 
+			fonctions sont les mêmes que ceux utilisé par Box2D, du coup si tu veux savoir comment elles marchent
+			il te suffit d'aller sur le site iforce2d.net il a un bon tuto
+		*/
+
+		//Clear - Draw all entity - Display
 		window.clear();
 		world.draw(window);
 		window.display();

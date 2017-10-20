@@ -101,6 +101,10 @@ bool PhysicalWorld::loadLevel(std::string levelPath) {
 	return true;
 }
 
+Character & PhysicalWorld::getCharacter() {
+	return entitiesManager->getCharacter();
+}
+
 b2Vec2 PhysicalWorld::pixelToMeter(sf::Vector2f vect) {
 	return b2Vec2(vect.x * scale, vect.y * scale);
 }

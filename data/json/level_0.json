@@ -59,15 +59,27 @@
 		"y": 7,
 		"textureName": "brick.png"
 	},
-	"Brick10": {
+	"Brick_10": {
 		"typeCoord": "Box2D",
 		"x": 13,
 		"y": 7,
 		"textureName": "brick.png"
 	},
-	"Brick11": {
+	"Brick_11": {
 		"typeCoord": "Box2D",
 		"x": 14,
+		"y": 7,
+		"textureName": "brick.png"
+	},
+	"Brick_12": {
+		"typeCoord": "Box2D",
+		"x": 3,
+		"y": 7,
+		"textureName": "brick.png"
+	},
+	"Brick_13": {
+		"typeCoord": "Box2D",
+		"x": 4,
 		"y": 7,
 		"textureName": "brick.png"
 	},
