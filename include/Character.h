@@ -3,11 +3,11 @@
 
 #include "EntityDynamic.h"
 
-class EntityPlayable : public EntityDynamic {
+class Character : public EntityDynamic {
 private:
 public:
-	EntityPlayable(b2Vec2&, std::string, b2World&);
-	~EntityPlayable();
+	Character(b2Vec2&, std::string, b2World&);
+	~Character();
 };
 
 #endif // !ENTITY_PLAYABLE_H

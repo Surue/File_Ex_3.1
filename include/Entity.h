@@ -6,6 +6,7 @@
 #include <SFML\Graphics.hpp>
 
 #include "TextureManager.h"
+#include <iostream>
 
 class Entity {
 protected:
@@ -13,9 +14,11 @@ protected:
 	sf::Sprite sprite;
 public:
 	Entity(std::string);
-	~Entity();
+	virtual ~Entity();
 
 	void draw(sf::RenderWindow&);
+
+	b2Vec2 getPosition();
 };
 
 #endif // !ENTITY_H

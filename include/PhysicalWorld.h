@@ -27,7 +27,9 @@ public:
 	void addEntity(sf::Vector2f, std::string, bool = false, bool = false);
 	void addEntity(b2Vec2, std::string, bool = false, bool = false);
 	bool loadLevel(std::string);
+	Character& getCharacter();
 
+	//Function to get the right scale scale between SFML and Box2D
 	static b2Vec2 pixelToMeter(sf::Vector2f);
 	static float pixelToMeter(float);
 	static sf::Vector2f meterToPixel(b2Vec2);
