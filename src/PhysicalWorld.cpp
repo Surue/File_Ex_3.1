@@ -42,7 +42,7 @@ bool PhysicalWorld::loadLevel(std::string levelPath) {
 	std::ifstream file(levelPath);
 
 	if (!file) {
-		std::cout << "File failed to open";
+		std::cout << "DEBUG MESSAGE: File failed to open";
 		return false;
 	}
 
@@ -88,7 +88,6 @@ bool PhysicalWorld::loadLevel(std::string levelPath) {
 				(bool)tmpEntity.find("isPlayable")->second
 			);
 		} else {
-			std::cout << "OCU\n";
 			addEntity(
 				sf::Vector2f(tmpEntity.find("x")->second, tmpEntity.find("y")->second),
 				tmpTexture,

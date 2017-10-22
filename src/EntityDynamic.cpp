@@ -8,9 +8,13 @@ EntityDynamic::EntityDynamic(b2Vec2 & position, std::string textureName, b2World
 	body = world.CreateBody(&bodyDef);
 
 	//Fixture
-	b2PolygonShape fixtureDef;
-	fixtureDef.SetAsBox(1.f / 2.f, 1.f / 2.f);
-	body->CreateFixture(&fixtureDef, 0.f);
+	b2CircleShape circleShape;
+	circleShape.m_p.Set(0, 0); //position, relative to body position
+	circleShape.m_radius = 0.5; //radius
+
+	b2FixtureDef fixtureDef;
+	fixtureDef.shape = &circleShape;
+	body->CreateFixture(&fixtureDef);
 }
 
 EntityDynamic::~EntityDynamic() {
