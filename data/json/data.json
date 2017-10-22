@@ -1,0 +1,10 @@
+{
+	"window_x" : 1024,
+	"window_y" : 768,
+	"title" : "Exercice 3.1",
+	"framerate" : 60,
+	"gravity" : 9.81,
+	"scale" : 64,
+	"velocityIteration" : 8,
+	"positionIteration" : 3
+}
